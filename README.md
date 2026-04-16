@@ -1,8 +1,8 @@
-# @klave/sdk
+# @juny-klave/sdk
 
 OAuth for AI agents.
 
-`@klave/sdk` implements KLAVE's Agent Authorization Protocol (AAP) — a typed, retry-safe client that lets your autonomous agent negotiate prices within cryptographically enforced bounds.
+`@juny-klave/sdk` implements KLAVE's Agent Authorization Protocol (AAP) — a typed, retry-safe client that lets your autonomous agent negotiate prices within cryptographically enforced bounds.
 
 ---
 
@@ -21,7 +21,7 @@ AAP issues a signed token that encodes these constraints before the agent touche
 ## Install
 
 ```bash
-npm install @klave/sdk
+npm install @juny-klave/sdk
 ```
 
 ---
@@ -29,7 +29,7 @@ npm install @klave/sdk
 ## Quick start
 
 ```typescript
-import { KlaveClient } from '@klave/sdk';
+import { KlaveClient } from '@juny-klave/sdk';
 
 const client = new KlaveClient({ apiKey: process.env.KLAVE_KEY! });
 
@@ -114,7 +114,7 @@ const result = await client.finalize(sessionId);
 All mutation methods accept an optional `idempotencyKey`. Replay the same key within 24 hours and the server returns the original result without creating a duplicate session.
 
 ```typescript
-import { generateIdempotencyKey } from '@klave/sdk';
+import { generateIdempotencyKey } from '@juny-klave/sdk';
 
 const key = generateIdempotencyKey();
 const result1 = await client.negotiate({ scopeToken, listingId, idempotencyKey: key });
@@ -128,7 +128,7 @@ const result2 = await client.negotiate({ scopeToken, listingId, idempotencyKey: 
 
 ```typescript
 import express from 'express';
-import { KlaveClient } from '@klave/sdk';
+import { KlaveClient } from '@juny-klave/sdk';
 
 const client = new KlaveClient({ apiKey: process.env.KLAVE_KEY! });
 const app = express();
@@ -152,7 +152,7 @@ app.post('/negotiate', async (req, res) => {
 ## Error handling
 
 ```typescript
-import { KlaveError } from '@klave/sdk';
+import { KlaveError } from '@juny-klave/sdk';
 
 try {
   await client.negotiate({ scopeToken, listingId });
@@ -211,7 +211,7 @@ pip install klave-sdk  # coming soon — use the source directly for now
 
 - [KLAVE MCP server](https://github.com/juny-klave/klave-mcp) — use KLAVE from Claude without writing code
 - [API docs](https://klavecommerce.com/docs)
-- [npm: @klave/sdk](https://npmjs.com/package/@klave/sdk)
+- [npm: @juny-klave/sdk](https://npmjs.com/package/@juny-klave/sdk)
 
 ---
 
