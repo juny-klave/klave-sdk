@@ -1,6 +1,6 @@
 {
   "name": "@juny-klave/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "KLAVE Agent Authorization Protocol SDK — cryptographically bounded authorization for autonomous AI agents",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
