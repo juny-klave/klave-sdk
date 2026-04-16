@@ -36,6 +36,9 @@
     "agentic-commerce",
     "klave"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
