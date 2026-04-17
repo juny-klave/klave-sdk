@@ -210,7 +210,7 @@ pip install klave-sdk  # coming soon — use the source directly for now
 ## Links
 
 - [KLAVE MCP server](https://github.com/juny-klave/klave-mcp) — use KLAVE from Claude without writing code
-- [API docs](https://klavecommerce.com/docs)
+- [API docs](https://klavecommerce.com)
 - [npm: @juny-klave/sdk](https://npmjs.com/package/@juny-klave/sdk)
 
 ---
